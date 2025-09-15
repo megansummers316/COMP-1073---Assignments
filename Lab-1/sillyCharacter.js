@@ -48,11 +48,11 @@ function charDesc() {
 // Functions to update character's age
 function increaseAge() {
     ++charAge;
-    charDesc();
+    updateDescAge();
 }
 function descreaseAge() {
     --charAge;
-    charDesc();
+    updateDescAge();
 }
 
 // Function to update the character's description after changing age
