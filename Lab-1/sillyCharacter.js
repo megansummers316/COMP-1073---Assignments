@@ -56,7 +56,10 @@ function descreaseAge() {
 }
 
 // Function to update the character's description after changing age
-function updateDesc() {
+function updateDescName() {
+
+}
+function updateDescAge() {
 
 }
 
