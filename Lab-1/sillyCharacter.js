@@ -41,15 +41,19 @@ let favFood = 'subs';
 
 
 // Function to generate a random character description
-
+function charDesc() {
+    
+}
 
 // Functions to update character's age
+function updateAge() {
 
-
-
+}
 
 // Function to update the character's description after changing age
+function updateDesc() {
 
+}
 
 // Add event listeners for buttons using querySelector
 
