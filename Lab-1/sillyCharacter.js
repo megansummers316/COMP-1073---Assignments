@@ -65,7 +65,12 @@ function updateDescName() {
 
 }
 function updateDescAge() {
-    let descAge = `${charName} is now ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+    if (superhero == true) {
+        let description = `${charName}'s new age is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+    }
+    else {
+        let description = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+    }
 }
 
 // Add event listeners for buttons using querySelector
