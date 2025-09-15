@@ -42,7 +42,12 @@ let favFood = 'subs';
 
 // Function to generate a random character description
 function charDesc() {
-    let description = `${charName} is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+    if (superhero == true) {
+        let description = `${charName} is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+    }
+    else {
+        let description = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+    }
 }
 
 // Functions to update character's age
@@ -60,7 +65,7 @@ function updateDescName() {
 
 }
 function updateDescAge() {
-
+    let descAge = `${charName} is now ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
 }
 
 // Add event listeners for buttons using querySelector
