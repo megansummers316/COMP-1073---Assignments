@@ -33,7 +33,7 @@ display the character's attributes in a creative and humorous way.
 */
 
 // Declare and initialize variables
-let charName = '';
+let charName = 'Kevin Adamson';
 let charAge = 42;
 let superhero = true;
 let specialPowers = ['flying', 'super strength'];
@@ -42,7 +42,7 @@ let favFood = 'subs';
 
 // Function to generate a random character description
 function charDesc() {
-    
+    let description = `${charName} is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
 }
 
 // Functions to update character's age
