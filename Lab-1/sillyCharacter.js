@@ -79,6 +79,16 @@ function updateAbility() {
     updateDescAbility();
 }
 
+//functions to change whether they are a superhero or not
+function yesSuperhero() {
+    superhero = true;
+    updateDescSuper();
+}
+function noSuperhero() {
+    superhero = false;
+    updateDescSuper();
+}
+
 // Function to update the character's description after changing name or age
 function updateDescName() {
     if (superhero == true) {
@@ -110,6 +120,14 @@ function updateDescAbility() {
     }
     else {
         pDesc.textContent = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}`;
+    }
+}
+function updateDescSuper() {
+    if (superhero == true) {
+        pDesc.textContent = `${charName} is ${charAge}. They are a new superhero with the ability to ${specialPowers} and their favourite food is ${favFood}`;
+    }
+    else {
+        pDesc.textContent = `The villian ${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}`;
     }
 }
 
