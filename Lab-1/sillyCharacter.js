@@ -38,6 +38,7 @@ let charAge = 42;
 let superhero = true;
 let specialPowers = ['flying', 'super strength'];
 let favFood = 'subs';
+let pDesc = document.querySelector('p');
 
 
 // Function to generate a random character description
@@ -48,6 +49,7 @@ function charDesc() {
     else {
         let description = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
     }
+    pDesc.textContent = description;
 }
 
 // Functions to update character's age
@@ -68,6 +70,7 @@ function updateDescName() {
     else {
         let description = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
     }
+    pDesc.textContent = description;
 }
 function updateDescAge() {
     if (superhero == true) {
@@ -76,6 +79,7 @@ function updateDescAge() {
     else {
         let description = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
     }
+    pDesc.textContent = description;
 }
 
 // Add event listeners for buttons using querySelector
