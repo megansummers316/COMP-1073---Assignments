@@ -138,6 +138,8 @@ let decAge = document.querySelector('button#decreaseAgeButton');
 let updName = document.querySelector('button#newName');
 let updFood = document.querySelector('button#newFood');
 let updAbility = document.querySelector('button#newAbility');
+let yesSuperButton = document.querySelector('button#yesSuper');
+let noSuperButton = document.querySelector('button#noSuper');
 
 generateButton.addEventListener('click', charDesc);
 incAge.addEventListener('click', increaseAge);
@@ -145,3 +147,5 @@ decAge.addEventListener('click', decreaseAge);
 updName.addEventListener('click', updateName);
 updFood.addEventListener('click', updateFood);
 updAbility.addEventListener('click', updateAbility);
+yesSuperButton.addEventListener('click', yesSuperhero);
+noSuperButton.addEventListener('click', noSuperhero);
