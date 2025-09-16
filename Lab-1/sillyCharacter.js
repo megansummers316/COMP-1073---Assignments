@@ -61,7 +61,13 @@ function decreaseAge() {
     updateDescAge();
 }
 
-// Function to update the character's description after changing age
+//function to update character's name
+function updateName() {
+    charName = document.querySelector('input#newName').textContent;
+    updateDescName();
+}
+
+// Function to update the character's description after changing name or age
 function updateDescName() {
     if (superhero == true) {
         pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
@@ -83,6 +89,7 @@ function updateDescAge() {
 let generateButton = document.querySelector('button#generateButton');
 let incAge = document.querySelector('button#increaseAgeButton');
 let decAge = document.querySelector('button#decreaseAgeButton');
+let updName = document.querySelector('button#newName');
 
 generateButton.addEventListener('click', charDesc);
 incAge.addEventListener('click', increaseAge);
