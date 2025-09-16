@@ -36,7 +36,7 @@ display the character's attributes in a creative and humorous way.
 let charName = 'Kevin Adamson';
 let charAge = Math.floor(Math.random() * 61) + 20;
 let superhero = true;
-let specialPowers = ['flying', 'super strength'];
+let specialPowers = 'fly';
 let favFood = 'subs';
 let pDesc = document.querySelector('p#characterDescription');
 
@@ -63,14 +63,14 @@ function decreaseAge() {
 
 //function to update character's name
 function updateName() {
-    charName = document.querySelector('input#newName').textContent;
+    charName = document.querySelector('input#newName').value;
     updateDescName();
 }
 
 // Function to update the character's description after changing name or age
 function updateDescName() {
     if (superhero == true) {
-        pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge} with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
         pDesc.textContent = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
@@ -78,7 +78,7 @@ function updateDescName() {
 }
 function updateDescAge() {
     if (superhero == true) {
-        pDesc.textContent = `${charName}'s new age is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `${charName}'s new age is ${charAge}. They are a superhero with the ability to ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
         pDesc.textContent = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
@@ -94,3 +94,4 @@ let updName = document.querySelector('button#newName');
 generateButton.addEventListener('click', charDesc);
 incAge.addEventListener('click', increaseAge);
 decAge.addEventListener('click', decreaseAge);
+updName.addEventListener('click', updateName);
