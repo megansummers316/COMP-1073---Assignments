@@ -62,7 +62,12 @@ function descreaseAge() {
 
 // Function to update the character's description after changing age
 function updateDescName() {
-
+    if (superhero == true) {
+        let description = `The superhero's new name is ${charName} and they are ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+    }
+    else {
+        let description = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+    }
 }
 function updateDescAge() {
     if (superhero == true) {
