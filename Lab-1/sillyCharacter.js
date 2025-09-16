@@ -34,7 +34,7 @@ display the character's attributes in a creative and humorous way.
 
 // Declare and initialize variables
 let charName = 'Kevin Adamson';
-let charAge = 42;
+let charAge = Math.floor(Math.random() * 61) + 20;
 let superhero = true;
 let specialPowers = ['flying', 'super strength'];
 let favFood = 'subs';
