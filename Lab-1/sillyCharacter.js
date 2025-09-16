@@ -95,7 +95,7 @@ function updateDescName() {
         pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge} with the ability t0 ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
-        pDesc.textContent = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}`;
+        pDesc.textContent = `The villian's new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}`;
     }
 }
 function updateDescAge() {
