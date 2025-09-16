@@ -67,13 +67,25 @@ function updateName() {
     updateDescName();
 }
 
+//function to update favourite food
+function updateFood() {
+    favFood = document.querySelector('input#newFood').value;
+    updateDescFood();
+}
+
+//function to update ability
+function updateAbility() {
+    specialPowers = document.querySelector('input#newAbility').value;
+    updateDescAbility();
+}
+
 // Function to update the character's description after changing name or age
 function updateDescName() {
     if (superhero == true) {
-        pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge} with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge} with the ability t0 ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
-        pDesc.textContent = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+        pDesc.textContent = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}`;
     }
 }
 function updateDescAge() {
@@ -81,7 +93,23 @@ function updateDescAge() {
         pDesc.textContent = `${charName}'s new age is ${charAge}. They are a superhero with the ability to ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
-        pDesc.textContent = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+        pDesc.textContent = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}`;
+    }
+}
+function updateDescFood() {
+    if (superhero == true) {
+        pDesc.textContent = `${charName} is ${charAge}. They are a superhero with the ability to ${specialPowers} and their new favourite food is ${favFood}`;
+    }
+    else {
+        pDesc.textContent = `${charName} is ${charAge}. Their new favourite food is ${favFood} and have the ability to ${specialPowers}`;
+    }
+}
+function updateDescAbility() {
+    if (superhero == true) {
+        pDesc.textContent = `${charName} is ${charAge}. They are a superhero with the new ability to ${specialPowers} and their favourite food is ${favFood}`;
+    }
+    else {
+        pDesc.textContent = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}`;
     }
 }
 
@@ -90,8 +118,12 @@ let generateButton = document.querySelector('button#generateButton');
 let incAge = document.querySelector('button#increaseAgeButton');
 let decAge = document.querySelector('button#decreaseAgeButton');
 let updName = document.querySelector('button#newName');
+let updFood = document.querySelector('button#newFood');
+let updAbility = document.querySelector('button#newAbility');
 
 generateButton.addEventListener('click', charDesc);
 incAge.addEventListener('click', increaseAge);
 decAge.addEventListener('click', decreaseAge);
 updName.addEventListener('click', updateName);
+updFood.addEventListener('click', updateFood);
+updAbility.addEventListener('click', updateAbility);
