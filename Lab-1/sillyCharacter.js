@@ -39,15 +39,16 @@ let superhero = true;
 let specialPowers = ['flying', 'super strength'];
 let favFood = 'subs';
 let pDesc = document.querySelector('p');
+let description;
 
 
 // Function to generate a random character description
 function charDesc() {
     if (superhero == true) {
-        let description = `${charName} is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        description = `${charName} is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
-        let description = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+        description = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
     }
     pDesc.textContent = description;
 }
@@ -65,19 +66,19 @@ function descreaseAge() {
 // Function to update the character's description after changing age
 function updateDescName() {
     if (superhero == true) {
-        let description = `The superhero's new name is ${charName} and they are ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        description = `The superhero's new name is ${charName} and they are ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
-        let description = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+        description = `The villans new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
     }
     pDesc.textContent = description;
 }
 function updateDescAge() {
     if (superhero == true) {
-        let description = `${charName}'s new age is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        description = `${charName}'s new age is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
     }
     else {
-        let description = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+        description = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
     }
     pDesc.textContent = description;
 }
@@ -87,6 +88,6 @@ let generateButton = document.querySelector('button#generateButton');
 let incAge = document.querySelector('button#increaseAgeButton');
 let decAge = document.querySelector('button#decreaseAgeButton');
 
-generateButton.addEventListener('click', charDesc());
-incAge.addEventListener('click', increaseAge());
-decAge.addEventListener('click', descreaseAge());
+generateButton.addEventListener('click', charDesc);
+incAge.addEventListener('click', increaseAge);
+decAge.addEventListener('click', descreaseAge);
