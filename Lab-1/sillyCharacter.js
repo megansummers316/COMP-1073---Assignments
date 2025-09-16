@@ -83,4 +83,6 @@ function updateDescAge() {
 }
 
 // Add event listeners for buttons using querySelector
-
+let generateButton = document.querySelector('#generateButton');
+let incAge = document.querySelector('#increaseAgeButton');
+let decAge = document.querySelector('#decreaseAgeButton');
