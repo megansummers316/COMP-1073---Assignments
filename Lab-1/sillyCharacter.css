@@ -1,5 +1,4 @@
-/* fonts */
-
+/* fonts taken from Google Fonts */
 .bitcount-ink-titleFont {
   font-family: "Bitcount Ink", system-ui;
   font-optical-sizing: auto;
@@ -17,14 +16,12 @@
     "YPN1" 0,
     "YPN2" 0;
 }
-
 .sometype-mono-buttonFont {
   font-family: "Sometype Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* my colour pallette used: https://coolors.co/9b8816-f98948-5d3a00-684e32-f9ea9a */
 body {
@@ -44,15 +41,18 @@ div > button {
     margin: 0.3rem;
     width: fit-content;
     align-self: center;
+    font-size: 1.2rem;
 }
 main {
     display: flex;
 }
 .displayInfo {
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 #generateButton {
-    background-color: #F98948;
+    background-color: #F9EA9A;
     font-size: 1.25rem;
     padding: 0.5rem;
 }
@@ -75,4 +75,21 @@ main {
 .yesNo {
     display: flex;
     justify-content: center;
+}
+#increaseAgeButton {
+    background-color: #F98948;
+}
+#decreaseAgeButton {
+    background-color: #684E32;
+    color: white;
+}
+.newButton {
+    background-color: #9B8816;
+}
+#yesSuper {
+    background-color: #F98948;
+}
+#noSuper {
+    background-color: #684E32;
+    color: white;
 }

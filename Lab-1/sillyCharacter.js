@@ -100,26 +100,26 @@ function updateDescName() {
 }
 function updateDescAge() {
     if (superhero == true) {
-        pDesc.textContent = `Introducing the superhero ${charName}'s new age is ${charAge}. They have the ability to ${specialPowers} and their favourite food is ${favFood}!`;
+        pDesc.textContent = `Introducing the superhero ${charName} who's new age is ${charAge}. They have the ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `Introducing the villian ${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}!`;
+        pDesc.textContent = `Introducing the villian ${charName} who's new age is ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}!`;
     }
 }
 function updateDescFood() {
     if (superhero == true) {
-        pDesc.textContent = `Introducing the superhero ${charName} is ${charAge}. They have the ability to ${specialPowers} and their new favourite food is ${favFood}!`;
+        pDesc.textContent = `Introducing the superhero ${charName} who is ${charAge}. They have the ability to ${specialPowers} and their new favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `Introducing the villian ${charName} is ${charAge}. Their new favourite food is ${favFood} and have the ability to ${specialPowers}!`;
+        pDesc.textContent = `Introducing the villian ${charName} who is ${charAge}. Their new favourite food is ${favFood} and have the ability to ${specialPowers}!`;
     }
 }
 function updateDescAbility() {
     if (superhero == true) {
-        pDesc.textContent = `Introducing the superhero ${charName} is ${charAge}. They have the new ability to ${specialPowers} and their favourite food is ${favFood}!`;
+        pDesc.textContent = `Introducing the superhero ${charName} who is ${charAge}. They have the new ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `Introducing the villian ${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}!`;
+        pDesc.textContent = `Introducing the villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}!`;
     }
 }
 function updateDescSuper() {
