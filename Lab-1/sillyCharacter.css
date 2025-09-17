@@ -1,0 +1,78 @@
+/* fonts */
+
+.bitcount-ink-titleFont {
+  font-family: "Bitcount Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
+
+.sometype-mono-buttonFont {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* my colour pallette used: https://coolors.co/9b8816-f98948-5d3a00-684e32-f9ea9a */
+body {
+    font-size: 10px;
+}
+h1 {
+    font-size: 3rem;
+    background-color: #5D3A00;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: wavy underline #6f0979;
+    font-family: "Bitcount Ink", system-ui;
+}
+div > button {
+    font-family: "Sometype Mono", monospace;
+    padding: 0.2rem;
+    margin: 0.3rem;
+    width: fit-content;
+    align-self: center;
+}
+main {
+    display: flex;
+}
+.displayInfo {
+    width: 50%;
+}
+#generateButton {
+    background-color: #F98948;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+#characterDescription {
+    font-size: 2rem;
+}
+.alterInfo label {
+    font-size: 1.5rem;
+}
+.ageChange {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+} 
+.nameChange, .foodChange, .abilityChange, .superhero {
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+.yesNo {
+    display: flex;
+    justify-content: center;
+}

@@ -44,10 +44,10 @@ let pDesc = document.querySelector('p#characterDescription');
 // Function to generate a random character description
 function charDesc() {
     if (superhero == true) {
-        pDesc.textContent = `${charName} is ${charAge}. They are a superhero with these abilities: ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `Introducing the superhero ${charName} who is ${charAge}. They have the ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}`;
+        pDesc.textContent = `Introducing the villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and have the abilities to ${specialPowers}!`;
     }
 }
 
@@ -92,10 +92,10 @@ function noSuperhero() {
 // Function to update the character's description after changing name or age
 function updateDescName() {
     if (superhero == true) {
-        pDesc.textContent = `Introducing the superhero ${charName} who is ${charAge} with the ability to ${specialPowers} and a favourite food of ${favFood}!`;
+        pDesc.textContent = `Introducing the superhero ${charName} (with a new name) who is ${charAge} with the ability to ${specialPowers} and a favourite food of ${favFood}!`;
     }
     else {
-        pDesc.textContent = `Introducing the villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and they have the ability to ${specialPowers}!`;
+        pDesc.textContent = `Introducing the villian ${charName} (with a new name) who is ${charAge}. Their favourite food is ${favFood} and they have the ability to ${specialPowers}!`;
     }
 }
 function updateDescAge() {
@@ -127,7 +127,7 @@ function updateDescSuper() {
         pDesc.textContent = `Introducing the new superhero: ${charName} who is ${charAge}. They have the ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `Introducing the new villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}!`;
+        pDesc.textContent = `Introducing the new villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}!`;
     }
 }
 

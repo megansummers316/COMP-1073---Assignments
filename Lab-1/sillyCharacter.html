@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silly Character Customizer</title>
+    <link rel="stylesheet" href="./sillyCharacter.css">
+    <!-- fonts taken from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Silly Character Customizer</h1>
-    <p id="characterDescription"></p>
-    <p></p>
-
-    <button id="generateButton">Generate Random Character</button>
-    <div class="alterinfo">
-        <div class="ageChange">
-            <button id="increaseAgeButton">Increase Age</button>
-            <button id="decreaseAgeButton">Decrease Age</button>
+    <main>
+        <div class="displayInfo">
+            <button id="generateButton">Generate Random Character</button>
+            <p id="characterDescription"></p>
         </div>
-        <div class="nameChange">
-            <label for="newName">Enter a new name: </label>
-            <input type="text" id="newName">
-            <button id="newName">Submit name</button>
+        <div class="alterInfo">
+            <div class="ageChange">
+                <button id="increaseAgeButton">Increase Age</button>
+                <button id="decreaseAgeButton">Decrease Age</button>
+            </div>
+            <div class="nameChange">
+                <label for="newName">Enter a new name: </label>
+                <input type="text" id="newName">
+                <button id="newName">Submit name</button>
+            </div>
+            <div class="foodChange">
+                <label for="newFood">Enter a new favourite food: </label>
+                <input type="text" id="newFood">
+                <button id="newFood">Submit favourite food</button>
+            </div>
+            <div class="abilityChange">
+                <label for="newAbility">Enter a new ability: </label>
+                <input type="text" id="newAbility">
+                <button id="newAbility">Submit ability</button>
+            </div>
+            <div class="superhero">
+                <label>Are they a superhero? </label>
+                <div class="yesNo">
+                    <button id="yesSuper">Yes</button>
+                    <button id="noSuper">No</button>
+                </div>
+            </div>
         </div>
-        <div class="foodChange">
-            <label for="newFood">Enter a new favourite food: </label>
-            <input type="text" id="newFood">
-            <button id="newFood">Submit favourite food</button>
-        </div>
-        <div class="abilityChange">
-            <label for="newAbility">Enter a new ability: </label>
-            <input type="text" id="newAbility">
-            <button id="newAbility">Submit ability</button>
-        </div>
-        <div class="superhero">
-            <label>Are they a superhero? </label>
-            <button id="yesSuper">Yes</button>
-            <button id="noSuper">No</button>
-        </div>
-    </div>
+    </main>
     <script src="sillyCharacter.js"></script>
 </body>
 </html>
