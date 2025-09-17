@@ -92,42 +92,42 @@ function noSuperhero() {
 // Function to update the character's description after changing name or age
 function updateDescName() {
     if (superhero == true) {
-        pDesc.textContent = `The superhero's new name is ${charName} and they are ${charAge} with the ability t0 ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `Introducing the superhero ${charName} who is ${charAge} with the ability to ${specialPowers} and a favourite food of ${favFood}!`;
     }
     else {
-        pDesc.textContent = `The villian's new name is ${charName} and they are ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}`;
+        pDesc.textContent = `Introducing the villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and they have the ability to ${specialPowers}!`;
     }
 }
 function updateDescAge() {
     if (superhero == true) {
-        pDesc.textContent = `${charName}'s new age is ${charAge}. They are a superhero with the ability to ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `Introducing the superhero ${charName}'s new age is ${charAge}. They have the ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}`;
+        pDesc.textContent = `Introducing the villian ${charName}'s new age is ${charAge}. Their favourite food is ${favFood} and have the ability to ${specialPowers}!`;
     }
 }
 function updateDescFood() {
     if (superhero == true) {
-        pDesc.textContent = `${charName} is ${charAge}. They are a superhero with the ability to ${specialPowers} and their new favourite food is ${favFood}`;
+        pDesc.textContent = `Introducing the superhero ${charName} is ${charAge}. They have the ability to ${specialPowers} and their new favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `${charName} is ${charAge}. Their new favourite food is ${favFood} and have the ability to ${specialPowers}`;
+        pDesc.textContent = `Introducing the villian ${charName} is ${charAge}. Their new favourite food is ${favFood} and have the ability to ${specialPowers}!`;
     }
 }
 function updateDescAbility() {
     if (superhero == true) {
-        pDesc.textContent = `${charName} is ${charAge}. They are a superhero with the new ability to ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `Introducing the superhero ${charName} is ${charAge}. They have the new ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}`;
+        pDesc.textContent = `Introducing the villian ${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}!`;
     }
 }
 function updateDescSuper() {
     if (superhero == true) {
-        pDesc.textContent = `${charName} is ${charAge}. They are a new superhero with the ability to ${specialPowers} and their favourite food is ${favFood}`;
+        pDesc.textContent = `Introducing the new superhero: ${charName} who is ${charAge}. They have the ability to ${specialPowers} and their favourite food is ${favFood}!`;
     }
     else {
-        pDesc.textContent = `The villian ${charName} is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}`;
+        pDesc.textContent = `Introducing the new villian ${charName} who is ${charAge}. Their favourite food is ${favFood} and have the new ability to ${specialPowers}!`;
     }
 }
 
