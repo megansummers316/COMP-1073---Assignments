@@ -1,0 +1,78 @@
+header {
+    font-size: 1.5rem;
+}
+
+.wordButtons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+}
+.wordButtons button {
+    font-size: 1.5rem;
+    height: 40px;
+    width: 75px;
+    border-radius: 20px;
+    border: none;
+}
+.person {
+    background-color: #FFBE0B;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.verb {
+    background-color: #3A86FF;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.adjective {
+    background-color: #FF006E;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.thing {
+    background-color: #8338EC;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.place {
+    background-color: #FB5607;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listenButtons {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+}
+.listenButtons button {
+    font-size: 1.7rem;
+    padding: 15px;
+    border-radius: 20px;
+}
+.listenButtons button:nth-of-type(1) {
+    background-color: greenyellow;
+    border: greenyellow;
+}
+.listenButtons button:nth-of-type(2) {
+    background-color: #009688;
+    border: #009688;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 100;
+}
