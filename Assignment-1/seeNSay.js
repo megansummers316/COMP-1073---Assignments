@@ -9,8 +9,12 @@ let surprise = document.querySelector('button#surprise');
 let playback = document.querySelector('button#playback');
 //and initializer for sentence element
 let sentenceElement = document.querySelector('p#sentence');
-//declare variables for each column's selected value
-let person1, verb2, adjective3, thing4, place5;
+//declare and initialize variables for each column's selected value
+let person1 = document.querySelector('p#personSelected');
+let verb2 = document.querySelector('p#verbSelected');
+let adjective3 = document.querySelector('p#adjSelected');
+let thing4 = document.querySelector('p#thingSelected');
+let place5 = document.querySelector('p#placeSelected');
 
 //add event listeners for each button
 personButton.addEventListener('click', person);
