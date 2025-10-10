@@ -77,8 +77,21 @@ function place() {
     place5.textContent = places[nextIndex].textContent;
 }
 function surpriseSentence() {
-
-}
+    //get the elements
+    const persons = document.querySelectorAll('div.person p:not(#personSelected)'); //7
+    const verbs = document.querySelectorAll('div.verb p:not(#verbSelected)'); //6
+    const adjs = document.querySelectorAll('div.adjective p:not(#adjSelected)'); //6
+    const things = document.querySelectorAll('div.thing p:not(#thingSelected)'); //7
+    const places = document.querySelectorAll('div.place p:not(#placeSelected)'); //6
+    //randomly choose one element from each list
+    let personChoice = Math.floor(Math.random() * persons.length);
+    let verbChoice = Math.floor(Math.random() * verbs.length);
+    let adjChoice = Math.floor(Math.random() * adjs.length);
+    let thingChoice = Math.floor(Math.random() * things.length);
+    let placeChoice = Math.floor(Math.random() * places.length);
+    //update sentence 
+    sentenceElement.textContent = persons[personChoice].textContent + " " + verbs[verbChoice].textContent + " " + adjs[adjChoice].textContent + " " + things[thingChoice].textContent + " " + places[placeChoice].textContent;
+} 
 function playSentence() {
     sentenceElement.textContent = person1.textContent + " " + verb2.textContent + " " + adjective3.textContent + " " + thing4.textContent + " " + place5.textContent;
 }
