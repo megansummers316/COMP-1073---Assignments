@@ -51,11 +51,16 @@ header {
     flex-direction: column;
     justify-content: center;
 }
+#personSelected, #verbSelected, #adjSelected, #thingSelected, #placeSelected {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
 .listenButtons {
     display: flex;
     justify-content: space-around;
     margin: 25px;
+    font-size: 1.5rem;
 }
 .listenButtons button {
     font-size: 1.7rem;
