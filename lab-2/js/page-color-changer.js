@@ -13,25 +13,7 @@ let blue = 0;
 redSlider.addEventListener('change', changeColour);
 greenSlider.addEventListener('change', changeColour);
 blueSlider.addEventListener('change', changeColour);
-//functions for event listeners (step 7)
-function changeRed() {
-    //get amount red is set to from slider
-    red = Number(redSlider.value);
-    //reset background colour
-    body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-}
-function changeGreen() {
-    //get green amount from slider
-    green = Number(greenSlider.value);
-    //reset background colour
-    body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-}
-function changeBlue() {
-    //get blue amount from slider
-    blue = Number(blueSlider.value);
-    //reset background colour
-    body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-}
+//function for event listeners (step 7)
 function changeColour() {
     //get all colour amounts from sliders
     red = Number(redSlider.value);
