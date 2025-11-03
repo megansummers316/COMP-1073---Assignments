@@ -9,3 +9,11 @@
 header, footer {
     background-color: #ACD461;
 }
+.smoothieMachine {
+    display: flex;
+    justify-content: space-evenly;
+}
+.ingredients {
+    background-color: #07A1C3;
+    padding: 30px;
+}
