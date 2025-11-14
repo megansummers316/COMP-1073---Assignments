@@ -1,4 +1,4 @@
-const button = document.querySelector('button');
+const mixBtn = document.querySelector('button');
 
 class Smoothie {
     yogurt;
@@ -37,47 +37,70 @@ class Smoothie {
                 ygtFlv = 'vanilla';
         }
         //fruit options: Strawberries, raspberries, blueberries, blackberries, peaches, banana, kiwi, mango
-        let fruitUsed = {};
-        switch(this.fruits) {
-            case "Strawberries":
-                fruitUsed.add("strawberries");
-            case "Raspberries":
-                fruitUsed.add('raspberries');
-            case "Blueberries": 
-                fruitUsed.add('bluberries');
-            case 'Blackberries':
-                fruitUsed.add('blackberries');
-            case 'Peaches':
-                fruitUsed.add('peaches');
-            case 'Banana':
-                fruitUsed.add('banana');
-            case 'Kiwi':
-                fruitUsed.add('kiwi');
-            case 'Mango':
-                fruitUsed.add('mango');
-        }
+        let fruitUsed = [];
+        this.fruits.forEach(fruit => {
+            switch(fruit) {
+                case "Strawberries":
+                    fruitUsed.push("strawberries");
+                    break;
+                case "Raspberries":
+                    fruitUsed.push('raspberries');
+                    break;
+                case "Blueberries": 
+                    fruitUsed.push('bluberries');
+                    break;
+                case 'Blackberries':
+                    fruitUsed.push('blackberries');
+                    break;
+                case 'Peaches':
+                    fruitUsed.push('peaches');
+                    break;
+                case 'Banana':
+                    fruitUsed.push('banana');
+                    break;
+                case 'Kiwi':
+                    fruitUsed.push('kiwi');
+                    break;
+                case 'Mango':
+                    fruitUsed.push('mango');
+                    break;
+            }
+        })
+        
         //seed/nut options: chai seeds, hemp seeds, flax seeds, pumpkin seeds, almonds, walnuts, pecans, cashews, granola
-        let seedsNuts = {};
-        switch(this.nuts) {
-            case "Chai Seeds":
-                seedsNuts.add("chai seeds");
-            case "Hemp Seeds":
-                seedsNuts.add("hemp seeds");
-            case "Flax Seeds": 
-                seedsNuts.add('flax seeds');
-            case 'Pumpkin Seeds':
-                seedsNuts.add('pumpkin seeds');
-            case 'Almonds':
-                seedsNuts.add('almonds');
-            case 'Walnuts':
-                seedsNuts.add('walnuts');
-            case 'Pecans':
-                seedsNuts.add('pecans');
-            case 'Cashews':
-                seedsNuts.add('cashews');
-            case 'Granola':
-                seedsNuts.add('granola');
-        }
+        let seedsNuts = [];
+        this.nuts.forEach(sn => {
+            switch(sn) {
+                case "Chai Seeds":
+                    seedsNuts.push("chai seeds");
+                    break;
+                case "Hemp Seeds":
+                    seedsNuts.push("hemp seeds");
+                    break;
+                case "Flax Seeds": 
+                    seedsNuts.push('flax seeds');
+                    break;
+                case 'Pumpkin Seeds':
+                    seedsNuts.push('pumpkin seeds');
+                    break;
+                case 'Almonds':
+                    seedsNuts.push('almonds');
+                    break;
+                case 'Walnuts':
+                    seedsNuts.push('walnuts');
+                    break;
+                case 'Pecans':
+                    seedsNuts.push('pecans');
+                    break;
+                case 'Cashews':
+                    seedsNuts.push('cashews');
+                    break;
+                case 'Granola':
+                    seedsNuts.push('granola');
+                    break;
+            }
+        })
+        
         //drizzle options: chocolate, honey, maple syurp, cinnamon
         let drz;
         switch(this.drizzle) {
@@ -116,10 +139,28 @@ class Smoothie {
         }
         cup.setAttribute('height', cupSize);
         //generate a description for the drink
-        let desc = `A ${this.size} ${ygtFlv} smoothie with ${fruitUsed}, ${seedsNuts} as well as ${drz} drizzle to top it off!`;
+        let desc = `A ${this.size} ${ygtFlv} smoothie with ${fruitUsed}, ${seedsNuts} and ${drz} drizzle to top it off!`;
         const descEle = document.querySelector('p#output');
         //set image and description elements
         descEle.textContent = desc;
         //image src set here
     }
 }
+
+function smoothieOrder() {
+    //dropdown values
+    const ygt = document.getElementById("ygtFlv").value;
+    const drz = document.getElementById("drz").value;
+    const cupSz = document.getElementById("cupSize").value;
+    //checkboxes
+    const frts = [...document.querySelectorAll('input[name="frtUsed"]:checked')]
+        .map(c => c.value);
+    const sdNt = [...document.querySelectorAll('input[name="seedsNuts"]:checked')]
+        .map(c => c.value);
+    //create smoothie object
+    const smoothie = new Smoothie(ygt, frts, sdNt, drz, cupSz);
+    //to build image and description
+    smoothie.smoothieMaker();
+}
+
+mixBtn.addEventListener('click', smoothieOrder);
