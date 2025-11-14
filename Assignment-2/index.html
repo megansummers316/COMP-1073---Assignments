@@ -17,55 +17,68 @@
             <div class="smoothieMachine">
                 <div class="ingredients">
                     <div class="yogurt">
-                        <!-- yogurt flavour options 
-                         will be dropdown -->
-                        <p>Vanilla</p>
-                        <p>Strawberry</p>
-                        <p>Blueberry</p>
-                        <p>Mixed Berry</p>
-                        <p>Greek</p>
+                        <!-- yogurt flavour options -->
+                        <label for="ygtFlv">Choose a yogurt flavour:</label>
+                        <select id="ygtFlv" name="ygtFlv">
+                            <option value="vanilla">Vanilla</option>
+                            <option value="strawberrry">Strawberry</option>
+                            <option value="blueberry">Blueberry</option>
+                            <option value="mixedBerry">Mixed Berry</option>
+                            <option value="greek">Greek</option>
+                        </select>
                     </div>
                     <div class="fruits">
-                        <!-- fruit topping options 
-                         will be checkboxes-->
-                        <p>Strawberries</p>
-                        <p>Raspberries</p>
-                        <p>Blueberries</p>
-                        <p>Blackberries</p>
-                        <p>Peaches</p>
-                        <p>Banana</p>
-                        <p>Kiwi</p>
-                        <p>Mango</p>
+                        <!-- fruit topping options -->
+                        <p>Select your fruit topping(s):</p>
+                        <label><input type="checkbox" name="frtUsed" value="strawberries">Strawberries</label>
+                        <label><input type="checkbox" name="frtUsed" value="raspberries">Raspberries</label>
+                        <label><input type="checkbox" name="frtUsed" value="blueberries">Blueberries</label>
+                        <label><input type="checkbox" name="frtUsed" value="blackberries">Blackberries</label>
+                        <label><input type="checkbox" name="frtUsed" value="peaches">Peaches</label>
+                        <label><input type="checkbox" name="frtUsed" value="banana">Banana</label>
+                        <label><input type="checkbox" name="frtUsed" value="kiwi">Kiwi</label>
+                        <label><input type="checkbox" name="frtUsed" value="mango">Mango</label>
+
                     </div>
                     <div class="nuts">
                         <!-- nuts topping options 
                          will be checkboxes -->
-                        <p>Chai Seeds</p>
-                        <p>Hemp Seeds</p>
-                        <p>Flax Seeds</p>
-                        <p>Pumpkin Seeds</p>
-                        <p>Almonds</p>
-                        <p>Walnuts</p>
-                        <p>Pecans</p>
-                        <p>Cashews</p>
-                        <p>Granola</p>
+                        <p>Select your seed/nut topping(s):</p>
+                        <label><input type="checkbox" name="seedsNuts" value="chai">Chai Seeds</label>
+                        <label><input type="checkbox" name="seedsNuts" value="hemp">Hemp Seeds</label>
+                        <label><input type="checkbox" name="seedsNuts" value="flax">Flax Seeds</label>
+                        <label><input type="checkbox" name="seedsNuts" value="pumpkin">Pumpkin Seeds</label>
+                        <label><input type="checkbox" name="seedsNuts" value="almond">Almonds</label>
+                        <label><input type="checkbox" name="seedsNuts" value="walnut">Walnuts</label>
+                        <label><input type="checkbox" name="seedsNuts" value="pecan">Pecans</label>
+                        <label><input type="checkbox" name="seedsNuts" value="cashew">Cashews</label>
+                        <label><input type="checkbox" name="seedsNuts" value="granola">Granola</label>
                     </div>
                     <div class="drizzles">
-                        <!-- drizzle options 
-                         will be dropdown -->
-                        <p>Chocolate</p>
-                        <p>Honey</p>
-                        <p>Maple Syrup</p>
-                        <p>Cinnamon</p>
+                        <!-- drizzle options -->
+                        <label for="drz">Choose a drizzle:</label>
+                        <select id="drz" name="drz">
+                            <option value="chocolate">Chocolate</option>
+                            <option value="honey">Honey</option>
+                            <option value="mapleSyrup">Maple Syrup</option>
+                            <option value="cinnamon">Cinnamon</option>
+                        </select>
                     </div>
                     <div class="size">
-                        <!-- size options
-                         will be dropdown -->
-                        <p>Small</p>
-                        <p>Medium</p>
-                        <p>Large</p>
-                        <p>Extra Large</p>
+                        <!-- size options -->
+                        <label for="cupSize">Choose a size:</label>
+                        <select id="cupSize" name="cupSize">
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">Extra Large</option>
+                        </select>
                     </div>
+                    <button>Mix Smoothie >></button>
+                </div>
+                <div class="customerSmoothie">
+                    <img id="smoothie">
+                    <p id="output"></p>
                 </div>
             </div>
         </main>

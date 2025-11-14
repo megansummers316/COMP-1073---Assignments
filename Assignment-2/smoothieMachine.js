@@ -1,3 +1,5 @@
+const button = document.querySelector('button');
+
 class Smoothie {
     yogurt;
     fruits = {};
@@ -12,7 +14,7 @@ class Smoothie {
         this.size = size;
     }
     smoothieMaker() {
-        const cup = document.createElement('img'); // need to set image src throughout
+        const cup = document.querySelector('img#smoothie'); // need to set image src throughout
         //yogurt options: vanilla, strawberry, blueberry, mixed berry, greek
         let ygtFlv;
         switch(this.yogurt) {
@@ -113,5 +115,11 @@ class Smoothie {
                 cupSize = '125';
         }
         cup.setAttribute('height', cupSize);
+        //generate a description for the drink
+        let desc = `A ${this.size} ${ygtFlv} smoothie with ${fruitUsed}, ${seedsNuts} as well as ${drz} drizzle to top it off!`;
+        const descEle = document.querySelector('p#output');
+        //set image and description elements
+        descEle.textContent = desc;
+        //image src set here
     }
 }
