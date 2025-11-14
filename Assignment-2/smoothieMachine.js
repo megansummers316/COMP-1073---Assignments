@@ -2,8 +2,8 @@ const mixBtn = document.querySelector('button');
 
 class Smoothie {
     yogurt;
-    fruits = {};
-    nuts = {};
+    fruits = [];
+    nuts = [];
     drizzle;
     size;
     constructor(yogurt, fruits, nuts, drizzle, size) {
@@ -16,86 +16,36 @@ class Smoothie {
     smoothieMaker() {
         const cup = document.querySelector('img#smoothie'); // need to set image src throughout
         //yogurt options: vanilla, strawberry, blueberry, mixed berry, greek
-        let ygtFlv;
-        switch(this.yogurt) {
-            case "Vanilla":
-                ygtFlv = 'vanilla';
-                break;
-            case "Strawberry":
-                ygtFlv = 'strawberry';
-                break;
-            case "Blueberry":
-                ygtFlv = 'blueberry';
-                break;
-            case "Mixed Berry":
-                ygtFlv = 'mixed berry';
-                break;
-            case "Greek":
-                ygtFlv = 'greek';
-                break;
-            default:
-                ygtFlv = 'vanilla';
-        }
-        //fruit options: Strawberries, raspberries, blueberries, blackberries, peaches, banana, kiwi, mango
-        let fruitUsed = [];
-        this.fruits.forEach(fruit => {
-            switch(fruit) {
-                case "Strawberries":
-                    fruitUsed.push("strawberries");
-                    break;
-                case "Raspberries":
-                    fruitUsed.push('raspberries');
-                    break;
-                case "Blueberries": 
-                    fruitUsed.push('bluberries');
-                    break;
-                case 'Blackberries':
-                    fruitUsed.push('blackberries');
-                    break;
-                case 'Peaches':
-                    fruitUsed.push('peaches');
-                    break;
-                case 'Banana':
-                    fruitUsed.push('banana');
-                    break;
-                case 'Kiwi':
-                    fruitUsed.push('kiwi');
-                    break;
-                case 'Mango':
-                    fruitUsed.push('mango');
-                    break;
-            }
-        })
-        
+        //fruit options: Strawberries, raspberries, blueberries, blackberries, peaches, banana, kiwi, mango        
         //seed/nut options: chai seeds, hemp seeds, flax seeds, pumpkin seeds, almonds, walnuts, pecans, cashews, granola
         let seedsNuts = [];
         this.nuts.forEach(sn => {
             switch(sn) {
-                case "Chai Seeds":
+                case "chai":
                     seedsNuts.push("chai seeds");
                     break;
-                case "Hemp Seeds":
+                case "hemp":
                     seedsNuts.push("hemp seeds");
                     break;
-                case "Flax Seeds": 
+                case "flax": 
                     seedsNuts.push('flax seeds');
                     break;
-                case 'Pumpkin Seeds':
+                case 'pumpkin':
                     seedsNuts.push('pumpkin seeds');
                     break;
-                case 'Almonds':
+                case 'almond':
                     seedsNuts.push('almonds');
                     break;
-                case 'Walnuts':
+                case 'walnut':
                     seedsNuts.push('walnuts');
                     break;
-                case 'Pecans':
+                case 'pecan':
                     seedsNuts.push('pecans');
                     break;
-                case 'Cashews':
+                case 'cashew':
                     seedsNuts.push('cashews');
                     break;
-                case 'Granola':
+                case 'granola':
                     seedsNuts.push('granola');
                     break;
             }
@@ -104,16 +54,16 @@ class Smoothie {
         //drizzle options: chocolate, honey, maple syurp, cinnamon
         let drz;
         switch(this.drizzle) {
-            case "Chocolate":
+            case "chocolate":
                 drz = 'chocolate';
                 break;
-            case "Honey":
+            case "honey":
                 drz = 'honey';
                 break;
-            case "Maple Syrup":
+            case "mapleSyrup":
                 drz = 'maple syrup'
                 break;
-            case "Cinnamon":
+            case "cinnamon":
                 drz = 'cinnamon';
                 break;
             default:
@@ -139,7 +89,11 @@ class Smoothie {
         }
         cup.setAttribute('height', cupSize);
         //generate a description for the drink
-        let desc = `A ${this.size} ${ygtFlv} smoothie with ${fruitUsed}, ${seedsNuts} and ${drz} drizzle to top it off!`;
+        if (drz == 'no'){
+            let desc = `A ${this.size} ${this.yogurt} smoothie with ${this.fruits.join(", ")}, ${seedsNuts.join(", ")}!`;
+        } else {
+            let desc = `A ${this.size} ${this.yogurt} smoothie with ${this.fruits.join(", ")}, ${seedsNuts.join(", ")} and ${drz} drizzle to top it off!`;
+        }
         const descEle = document.querySelector('p#output');
         //set image and description elements
         descEle.textContent = desc;
