@@ -19,25 +19,19 @@ const showDetailsBtn = document.querySelector('button.showDetails');
 class Truck {
     name;
     colour;
-    year;
-    scale;
+    year = 1966;
+    scale = '1/24';
     trim; // this means the lowrider or standard style
-    packaging;
+    packaging = 'window box';
     openableDoors;
     freewheeling;
-    price;
-    stock;
-    constructor(name, colour, year, scale, trim, packaging, openableDoors, freewheeling, price, stock){
+    price = 20.99;
+    constructor(name, colour, scale, trim, packaging, openableDoors, freewheeling, price, stock){
         this.name = name;
         this.colour = colour;
-        this.year = year;
-        this.scale = scale;
         this.trim = trim;
-        this.packaging = packaging;
         this.openableDoors = openableDoors;
         this.freewheeling = freewheeling;
-        this.price = price;
-        this.stock = stock;
     }
     newTruck() {
         const truck = document.createElement('img');
@@ -82,7 +76,7 @@ class Truck {
             desc = `A ${this.colour} ${this.trim} Chevy C10 Fleetside Pickup Truck with openable doors has a ${this.scale} scale in a ${this.packaging} are sold at \$${this.price}!`;
         }
         else if (this.openableDoors === false) {
-            desc = `A ${this.colour} ${this.trim} Chevy C10 Fleetside Pickup Truck with freewheeling has a ${this.scale} scale in a ${this.packaging} are sold at \$${this.price}!`;
+            desc = `A ${this.colour} ${this.trim} 1966 Chevy C10 Fleetside Pickup Truck with freewheeling has a ${this.scale} scale in a ${this.packaging} are sold at \$${this.price}!`;
         }
         const descEle = document.createElement('p');
         descEle.textContent = desc;
@@ -91,3 +85,14 @@ class Truck {
         createSection.appendChild(descEle);
     }
 }
+
+function createTruck() {
+    //dropdown values
+    const clr = document.getElementById('colour').value;
+    const trm = document.getElementById('trim').value;
+
+    //create truck object
+    const truck = new Truck
+}
+
+showDetailsBtn.addEventListener('click', createTruck);
