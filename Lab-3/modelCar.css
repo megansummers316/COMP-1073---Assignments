@@ -1,0 +1,13 @@
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+.truckDetails {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    width: 300px;
+    text-align: center;
+    align-content: center;
+}

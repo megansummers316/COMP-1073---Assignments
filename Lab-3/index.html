@@ -14,11 +14,10 @@
         </header>
         <main>
             <div class="create">
-                <img src="img/white-orangeLowrider.jpg" alt="Chevy C10 Fleetside image">
                 <h3>1966 Chevy C10 Fleetside</h3>
                 <div class="truckName">
                     <label for="tName">Name your Truck: </label>
-                    <textarea row="1" placeholder="eg: Albert"></textarea>
+                    <textarea id="tName" row="1" placeholder="eg: Albert"></textarea>
                 </div>
                 <div class="truckColour">
                     <label for="colour">Choose a colour: </label>
@@ -44,13 +43,17 @@
                     </select>
                 </div>
                 <div class="freewheeling">
-                    <label for="freewheeling">Will the tired be moveable?: </label>
+                    <label for="freewheeling">Will the tires be moveable?: </label>
                     <select id="freewheeling" name="freewheeling">
                         <option value="true">Yes</option>
                         <option value="false">No</option>
                     </select>
                 </div>
                 <button class="showDetails">Show Details</button>
+            </div>
+            <div class="truckDetails">
+                <img id="truckImg">
+                <p id="truckDesc"></p>
             </div>
         </main>
         <footer>
