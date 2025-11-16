@@ -25,7 +25,8 @@ class Truck {
     openableDoors;
     freewheeling;
     price;
-    constructor(name, colour, year, scale, trim, packaging, vehicleType, manufacturer, openableDoors, freewheeling, price){
+    stock;
+    constructor(name, colour, year, scale, trim, packaging, vehicleType, manufacturer, openableDoors, freewheeling, price, stock){
         this.name = name;
         this.colour = colour;
         this.year = year;
@@ -37,5 +38,6 @@ class Truck {
         this.openableDoors = openableDoors;
         this.freewheeling = freewheeling;
         this.price = price;
+        this.stock = stock;
     }
 }
