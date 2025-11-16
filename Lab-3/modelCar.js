@@ -13,6 +13,9 @@
     freewheeling: true
     price: 20.99 */
 
+
+const showDetailsBtn = document.querySelector('button.showDetails');
+
 class Truck {
     name;
     colour;
@@ -20,24 +23,26 @@ class Truck {
     scale;
     trim; // this means the lowrider or standard style
     packaging;
-    vehicleType;
-    manufacturer;
     openableDoors;
     freewheeling;
     price;
     stock;
-    constructor(name, colour, year, scale, trim, packaging, vehicleType, manufacturer, openableDoors, freewheeling, price, stock){
+    constructor(name, colour, year, scale, trim, packaging, openableDoors, freewheeling, price, stock){
         this.name = name;
         this.colour = colour;
         this.year = year;
         this.scale = scale;
         this.trim = trim;
         this.packaging = packaging;
-        this.vehicleType = vehicleType;
-        this.manufacturer = manufacturer;
         this.openableDoors = openableDoors;
         this.freewheeling = freewheeling;
         this.price = price;
         this.stock = stock;
+    }
+    newTruck() {
+        const img = document.createElement('img');
+        let truckImg;
+        //this.name used for name throughout as it does not need modified from user input
+        
     }
 }
