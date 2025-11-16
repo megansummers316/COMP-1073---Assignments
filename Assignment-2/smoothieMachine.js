@@ -123,8 +123,10 @@ class Smoothie {
         const descEle = document.querySelector('p#output');
         //set image and description elements
         descEle.textContent = desc;
+        if (this.yogurt === 'vanilla') {
+            cup.setAttribute('src', )
+        }
         document.querySelector('div.customerSmoothie').style.display = 'block';
-        //image src set here
     }
 }
 
