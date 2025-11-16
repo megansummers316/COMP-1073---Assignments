@@ -46,29 +46,29 @@ class Truck {
         //determining chosen colour and trim and setting src accordingly
         if (this.trim === 'lowrider') {
             if (this.colour === 'white/orange') {
-                truckImg = 'orange lowrider source';//fix this
+                truckImg = 'img/white-orangeLowrider';
             }
             else if (this.colour === 'green') {
-                truckImg = 'green lowrider source';//fix this
+                truckImg = 'img/greenLowrider';
             }
             else if (this.colour === 'red') {
-                truckImg = 'red lowrider source';//fix this
+                truckImg = 'img/greenLowrider';
             }
             else if (this.colour === 'blue/black') {
-                truckImg = 'blue lowrider source';//fix this
+                truckImg = 'img/blue-blackLowrider';
             }
         } else {
             if (this.colour === 'white/orange') {
-                truckImg = 'orange standard source';//fix this
+                truckImg = 'img/white-orangeStandard';
             }
             else if (this.colour === 'green') {
-                truckImg = 'green standard source';//fix this
+                truckImg = 'img/greenStandard';
             }
             else if (this.colour === 'red') {
-                truckImg = 'red standard source';//fix this
+                truckImg = 'img/greenStandard';
             }
             else if (this.colour === 'blue/black') {
-                truckImg = 'blue standard source';//fix this
+                truckImg = 'img/blue-blackStandard';
             }
         }
         truck.setAttribute('src', truckImg);
