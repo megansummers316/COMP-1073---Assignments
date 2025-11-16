@@ -18,10 +18,10 @@
                 <h3>1966 Chevy C10 Fleetside</h3>
                 <div class="truckName">
                     <label for="tName">Name your Truck: </label>
-                    <textarea placeholder="eg: Albert"></textarea>
+                    <textarea row="1" placeholder="eg: Albert"></textarea>
                 </div>
                 <div class="truckColour">
-                    <label for="colour">Choose a Colour: </label>
+                    <label for="colour">Choose a colour: </label>
                     <select id="colour" name="colour">
                         <option value="white/orange">White/Orange</option>
                         <option value="green">Green</option>
@@ -30,10 +30,24 @@
                     </select>
                 </div>
                 <div class="trim">
-                    <label for="trim">Choose a Trim: </label>
+                    <label for="trim">Choose a trim: </label>
                     <select id="trim" name="trim">
                         <option value="lowrider">Lowrider</option>
                         <option value="standard">Standard</option>
+                    </select>
+                </div>
+                <div class="openableDoors">
+                    <label for="openableDoors">Will the doors be openable?: </label>
+                    <select id="openableDoors" name="openableDoors">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="freewheeling">
+                    <label for="freewheeling">Will the tired be moveable?: </label>
+                    <select id="freewheeling" name="freewheeling">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
                     </select>
                 </div>
                 <button class="showDetails">Show Details</button>
