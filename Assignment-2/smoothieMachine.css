@@ -39,6 +39,9 @@ button:hover {
     display: none;
     background-color: #04B98E;
     padding: 30px;
+    justify-content: space-around;
+    font-size: 2rem;
+    text-align: center;
 }
 footer {
     background-color: #ACD461;

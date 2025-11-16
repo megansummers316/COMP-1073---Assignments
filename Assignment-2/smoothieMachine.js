@@ -124,9 +124,21 @@ class Smoothie {
         //set image and description elements
         descEle.textContent = desc;
         if (this.yogurt === 'vanilla') {
-            cup.setAttribute('src', )
+            cup.setAttribute('src', 'img/vanilla.png');
         }
-        document.querySelector('div.customerSmoothie').style.display = 'block';
+        else if (this.yogurt === 'blueberry') {
+            cup.setAttribute('src', 'img/blueberry.png');
+        }
+        else if (this.yogurt === 'strawberry') {
+            cup.setAttribute('src', 'img/strawberry.png');
+        }
+        else if (this.yogurt === 'chocolate') {
+            cup.setAttribute('src', 'img/chocolate.png');
+        }
+        else if (this.yogurt === 'greek') {
+            cup.setAttribute('src', 'img/greek.png');
+        }
+        document.querySelector('div.customerSmoothie').style.display = 'flex';
     }
 }
 
