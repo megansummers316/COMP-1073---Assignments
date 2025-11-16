@@ -5,15 +5,44 @@
 4. 04B98E green
 5. 07A1C3 blue */
 
-
-header, footer {
+header {
     background-color: #ACD461;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 5px;
 }
 .smoothieMachine {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 .ingredients {
     background-color: #07A1C3;
     padding: 30px;
+}
+.ingredients div {
+    padding: 12px;
+}
+select {
+    background-color: #F61E67;
+    color: white;
+}
+button {
+    background-color: #FC892C;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #F61E67;
+}
+.customerSmoothie {
+    display: none;
+    background-color: #04B98E;
+    padding: 30px;
+}
+footer {
+    background-color: #ACD461;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 5px;
 }

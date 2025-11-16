@@ -71,32 +71,59 @@ class Smoothie {
         }
         //size options: S - XL
         let cupSize;
+        let amount;
         switch(this.size) {
             case "S":
-                cupSize = '100';
+                amount = '100';
+                cupSize = 'small';
                 break;
             case "M":
-                cupSize = '125';
+                amount = '125';
+                cupSize = 'medium';
                 break;
             case "L":
-                cupSize = '150';
+                amount = '150';
+                cupSize = 'large';
                 break;
             case "XL":
-                cupSize = '200';
+                amount = '200';
+                cupSize = 'extra large';
                 break;
             default:
-                cupSize = '125';
+                amount = '125';
+                cupSize = 'medium';
         }
-        cup.setAttribute('height', cupSize);
-        //generate a description for the drink
-        if (drz == 'no'){
-            let desc = `A ${this.size} ${this.yogurt} smoothie with ${this.fruits.join(", ")}, ${seedsNuts.join(", ")}!`;
-        } else {
-            let desc = `A ${this.size} ${this.yogurt} smoothie with ${this.fruits.join(", ")}, ${seedsNuts.join(", ")} and ${drz} drizzle to top it off!`;
+        cup.setAttribute('height', amount);
+        //generate descriptions for the drink dependent on what is in it
+        let desc;
+        if (drz == 'no' && this.fruits.length === 0 && seedsNuts.length === 0) {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie!`;
+        }
+        else if (drz == 'no' && this.fruits.length === 0) {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${seedsNuts.join(", ")}!`;
+        }
+        else if (drz == 'no' && seedsNuts.length === 0) {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${this.fruits.join(", ")}!`;
+        }
+        else if (seedsNuts.length === 0 && this.fruits.length === 0) {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${drz} drizzle to top it off!`;
+        }
+        else if (this.fruits.length === 0) {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${seedsNuts.join(", ")} and ${drz} drizzle to top it off!`;
+        }
+        else if (seedsNuts.length === 0) {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${this.fruits.join(", ")} and ${drz} drizzle to top it off!`;
+        }
+        else if (drz == 'no'){
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${this.fruits.join(", ")}, ${seedsNuts.join(", ")}!`;
+        } 
+        else {
+            desc = `A(n) ${cupSize} ${this.yogurt} smoothie with ${this.fruits.join(", ")}, ${seedsNuts.join(", ")} and ${drz} drizzle to top it off!`;
         }
         const descEle = document.querySelector('p#output');
         //set image and description elements
         descEle.textContent = desc;
+        document.querySelector('div.customerSmoothie').style.display = 'block';
         //image src set here
     }
 }
