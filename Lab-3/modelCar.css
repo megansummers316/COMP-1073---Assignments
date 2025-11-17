@@ -1,4 +1,14 @@
-
+/*
+colours: https://coolors.co/fce762-fffded-ffb17a-4f4789-201335
+FCE762, FFFDED, FFB17A, 4F4789, 201335
+*/
+header {
+    background-color: #4F4789;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.5rem;
+}
 main {
     display: flex;
     justify-content: space-evenly;
@@ -10,4 +20,11 @@ main {
     width: 300px;
     text-align: center;
     align-content: center;
+}
+footer {
+    font-size: 2rem;
+    text-align: center;
+    background-color: #201335;
+    color: white;
+    padding: 2px;
 }
