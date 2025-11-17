@@ -23,6 +23,16 @@ main {
     text-align: center;
     text-decoration: underline;
 }
+.create button {
+    background-color: #FFB17A;
+    border-radius: 5px;
+    width: fit-content;
+    align-self: center;
+    padding: 5px;
+}
+.create button:hover {
+    background-color: #FFFDED;
+}
 .create div {
     padding: 10px;
 }
