@@ -1,0 +1,52 @@
+{
+  "companyName" : "I Scream Inc.",
+  "headOffice" : "South Pole, Antarctica",
+  "established" : 2001,
+  "active" : true,
+  "topFlavors" : [
+    {
+      "name" : "Monstrous Mint",
+      "calories" : 400,
+      "type" : "ice cream",
+      "ingredients" : [
+        "peppermint cream",
+        "dark chocolate chips",
+        "vanilla extract"
+      ],
+      "image" : "chocolate-mint.svg"
+    },
+    {
+      "name" : "Perfect Peach Mango",
+      "calories" : 350,
+      "type" : "sorbet",
+      "ingredients" : [
+        "peach purée",
+        "mango chunks",
+        "clover honey"
+      ],
+      "image" : "peach-mango.svg"
+    },
+    {
+      "name": "Luscious Lemon",
+      "calories": 275,
+      "type": "sorbet",
+      "ingredients": [
+        "lemon purée",
+        "lemon flavour",
+        "sprinkles"
+      ],
+      "image": "ice-cream-xtra1.svg"
+    },
+    {
+      "name": "French Vanilla Chocolate Chip",
+      "calories": 450,
+      "type": "ice cream",
+      "ingredients": [
+        "french vanilla cream",
+        "chocolate chips",
+        "vanilla extract"
+      ],
+      "image": "ice-cream-xtra2.svg"
+    }
+  ]
+}
