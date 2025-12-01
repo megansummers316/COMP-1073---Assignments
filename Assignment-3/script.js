@@ -42,10 +42,10 @@ function displayResults(json) {
     }
 
     //build elements for article
-    const article = document.querySelector('article');
-    const heading = document.querySelector('h2');
-    const img = document.querySelector('img');
-    const para = document.querySelector('p');
+    const article = document.createElement('article');
+    const heading = document.createElement('h2');
+    const img = document.createElement('img');
+    const para = document.createElement('p');
 
     //extract information from json
     const title = json.title;
@@ -60,14 +60,10 @@ function displayResults(json) {
         img.alt = title;
         article.appendChild(img);
     }
-    else {
-        img.alt = "Sorry, we had problems loading!";
-        article.appendChild(img);
-    }
 
     //fill in other information
     heading.textContent = `${title} (${date})`;
-    para.textContent = explanation;
+    para.textContent = desc;
 
     //committing to html
     article.appendChild(heading);
