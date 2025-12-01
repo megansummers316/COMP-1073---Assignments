@@ -31,3 +31,42 @@ function fetchResults(event) {
         .then(json => { displayResults(json) })
         .catch(error => { console.log("Error: " + error)});
 }
+
+function displayResults(json) {
+    //log to console for debugging
+    console.log(json);
+
+    //clear old results
+    while (section.firstChild) {
+        section.removeChild(section.firstChild);
+    }
+
+    //build elements for article
+    const article = document.querySelector('article');
+    const heading = document.querySelector('h2');
+    const img = document.querySelector('img');
+    const para = document.querySelector('p');
+
+    //extract information from json
+    const title = json.title;
+    const desc = json.explanation;
+    const date = json.date;
+    const mediaType = json.mediaType;
+    const url = json.url;
+
+    //APOD sometimes returns videos so to stop the error
+    if (mediaType === "image") {
+        img.src = url;
+        img.alt = title;
+        article.appendChild(img);
+    }
+
+    //fill in other information
+    heading.textContent = `${title} (${date})`;
+    para.textContent = explanation;
+
+    //committing to html
+    article.appendChild(heading);
+    article.appendChild(para);
+    section.appendChild(article);
+}
