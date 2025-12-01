@@ -60,6 +60,10 @@ function displayResults(json) {
         img.alt = title;
         article.appendChild(img);
     }
+    else {
+        img.alt = "Sorry, we had problems loading!";
+        article.appendChild(img);
+    }
 
     //fill in other information
     heading.textContent = `${title} (${date})`;
